@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template id="digest_views_id_pdf" xml:space="preserve">
+      <t t-extend="打印Bom列表 PDF">
+          <t t-jquery="//div[@style='margin-top: 60px;']:last-child" t-operation="before">
+            <div class="row" style='line-height: 30px;'>
+                <div class="col-5">
+                  <p>金钱:</p>
+                </div>
+                <div class="col-7">
+                  <p t-field='o.money'></p>
+                </div>
+              </div>
+          </t>
+      </t>
+  </template>
+</odoo>

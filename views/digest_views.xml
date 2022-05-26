@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="digest_views_tree_1" model="ir.ui.view">
+        <field name="name">bom_card_tree</field>
+        <field name="model">bom.card</field>
+        <field name="inherit_id" ref ="Bom_card-1.digest_views_tree"/>	
+        <field name="arch" type="xml">
+            <xpath expr ="//field[@name='adds_num']" position="after">
+                <field name="money" widget="monetary" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+    
+    <record id="digest_views_form_1" model="ir.ui.view">
+        <field name="name">bom_card_form</field>
+        <field name="model">bom.card</field>
+        <field name="inherit_id" ref ="Bom_card-1.digest_views_form"/>	
+        <field name="arch" type="xml">
+            <xpath expr ="//field[@name='project_amend']" position="after">
+                <field name="money" widget="monetary"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
